@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Build"
+		echo "$PATH"
             }
         }
         stage('Test') {
