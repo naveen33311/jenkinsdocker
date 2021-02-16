@@ -1,3 +1,5 @@
+//DECLARATIVE SCRIPT
+
 pipeline { 
     agent any
     stages {
@@ -17,4 +19,11 @@ pipeline {
             }
         }
     }
+    post {
+    always {
+        echo "I'm awesome, I will always run"
+        }
+    failure {
+        echo 'I run when you fail'
+        }
 }
